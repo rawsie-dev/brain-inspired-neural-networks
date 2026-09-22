@@ -1,0 +1,10 @@
+torch
+torchvision
+timm
+numpy==1.26.4
+pandas
+scikit-learn
+PyYAML
+tqdm
+openpyxl
+kagglehub

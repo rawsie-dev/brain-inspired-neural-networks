@@ -153,9 +153,7 @@ def main():
         args.output_dir = ROOT / args.output_dir
 
     if args.output_dir.exists() and any(args.output_dir.iterdir()):
-        parser.error(
-            f"refusing to overwrite non-empty output directory: {args.output_dir}"
-        )
+        parser.error(f"refusing to overwrite non-empty output directory: {args.output_dir}")
 
     total = len(TASKS) * len(MECHANISMS)
     summary = args.output_dir / "summary.csv"
@@ -178,7 +176,7 @@ def main():
             parser.error(str(error))
 
         print(f"Updated summary: {summary}", flush=True)
-        
+
     print(f"Completed. Summary: {summary}")
 
 

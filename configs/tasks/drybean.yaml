@@ -1,0 +1,8 @@
+model: mlp
+batch_size: 256
+learning_rate: 0.001
+dropout: 0.2
+max_epochs: 100
+patience: 5
+num_workers: 0
+seeds: [1, 16, 42, 123, 456, 789, 1111, 1234, 1616, 4242]

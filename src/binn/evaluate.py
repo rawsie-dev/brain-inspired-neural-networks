@@ -19,7 +19,7 @@ def evaluate(model, loader, device, task, loss_fn=None):
     loss = 0
     count = 0
 
-    for x,y in loader:
+    for x, y in loader:
         x = x.to(device)
         target = targets(y, task).to(device)
         logits = model(x)

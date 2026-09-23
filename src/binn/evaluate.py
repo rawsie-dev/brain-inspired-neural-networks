@@ -31,8 +31,7 @@ def evaluate(model, loader, device, task, loss_fn=None):
             pred = (p >= 0.5).long()
         else: 
             p = torch.softmax(logits, 1)
-
-        pred = p.argmax(1)
+            pred = p.argmax(1)
         ys.extend(y.view(-1).tolist())
         ps.extend(pred.cpu().tolist())
         probs.extend(p.cpu().tolist())
